@@ -146,7 +146,7 @@ void floodFillIter(cv::Mat image, cv::Point p0, cv::Vec3b color) {
 		cv::Point p(s.top().x, s.top().y);	//deep copy of the top element, so i can access x and y after popping the stack
 		//cout << p.x << " " << p.y << " " << endl;
 
-		if (p.x < 0 || p.y < 0 || p.x > image.rows - 1 || p.y > image.cols - 1) {		//x è la riga, y la colonna
+		if (p.x < 0 || p.y < 0 || p.x > image.rows - 1 || p.y > image.cols - 1) {		//Point.x is the row (see floodFill())
 			s.pop();
 			continue;
 		}
